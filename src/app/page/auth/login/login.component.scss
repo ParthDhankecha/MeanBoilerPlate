@@ -1,0 +1,68 @@
+.main-container {
+  padding-top: 150px;
+  width: 100%;
+}
+mat-icon {
+  margin-right: 5px;
+}
+.card-container {
+  width: 400px;
+  margin: auto;
+  padding-bottom: 20px;
+}
+#show {
+  cursor: pointer;
+  margin-left: 10px;
+}
+::ng-deep .warn {
+  background: #ea4336;
+  color: white !important;
+  button {
+    color: white;
+  }
+}
+::ng-deep .success {
+  background: #34a852;
+  color: white !important;
+  button {
+    color: white;
+  }
+}
+
+input,
+textarea {
+  font-size: 16px;
+}
+.login-card {
+  padding-bottom: 30px;
+}
+.login {
+  margin: auto;
+}
+.header {
+  text-align: center;
+  color: #144785;
+}
+.form-field {
+  width: 100%;
+}
+.password {
+  margin-top: 10px;
+}
+.login {
+  margin-top: 20px;
+}
+
+// @media (max-width: 500px) {
+//   .card-container {
+//     width: 300px;
+//   }
+// }
+@media (min-width: 320px) and (max-width: 480px) {
+  .card-container {
+    width: 330px;
+  }
+  .main-container {
+    padding-top: 100px;
+  }
+}

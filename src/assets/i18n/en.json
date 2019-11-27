@@ -1,0 +1,16 @@
+{
+  "UserName": "User Name",
+  "IsRequired": "is required",
+  "EnterValid": "Enter Valid ",
+  "Email": "Email",
+  "Password": "Password",
+  "MinValidPassword": "Password should conatins minimum 4 Character",
+  "MaxValidPassword": "Password should conatins maximum 64 Character",
+  "ValidUsername": "Enter valid User Name",
+  "LogoutMessage": "Logged out successfully.",
+  "SuccessLogin": "Logged in successfully.",
+  "Login": "Login",
+  "NoResponseFound": "No response founded. Please try again later.",
+  "Ok": "OK",
+  "Cancel": "Cancel"
+}

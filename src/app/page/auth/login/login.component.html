@@ -1,0 +1,90 @@
+<div class="main-container">
+  <div class="card-container">
+    <mat-card class="login-card">
+      <div>
+        <h1>
+          <p class="header" translate>Login</p>
+        </h1>
+      </div>
+      <mat-card-content>
+        <form #form="ngForm">
+          <div>
+            <mat-form-field appearance="outline" class="form-field">
+              <mat-label><span translate>UserName</span></mat-label>
+              <mat-icon matPrefix>perm_identity</mat-icon>
+
+              <input
+                class="field-container"
+                matInput
+                placeholder="Enter Username"
+                name="username"
+                [(ngModel)]="user.email"
+                id="input-email"
+                maxlength="30"
+                #email="ngModel"
+                pattern=".+@.+\..+"
+                required
+              />
+
+              <mat-hint *ngIf="email.errors?.required && email.touched">
+                <span translate>Email </span>
+                <span translate>IsRequired</span>
+              </mat-hint>
+
+              <mat-hint
+                class="text-danger"
+                *ngIf="email.errors?.pattern && email.touched"
+              >
+                <span translate>Email</span>
+                <span translate>RealOne</span>
+              </mat-hint>
+            </mat-form-field>
+          </div>
+          <div class="password">
+            <mat-form-field appearance="outline" class="form-field">
+              <mat-label><span translate>Password</span></mat-label>
+              <mat-icon matPrefix>vpn_key</mat-icon>
+              <mat-icon matSuffix id="show" (click)="showPassword()">{{
+                visible
+              }}</mat-icon>
+              <input
+                [type]="inputType"
+                class="field-container"
+                matInput
+                placeholder="Enter Password"
+                name="password"
+                [(ngModel)]="user.password"
+                #password="ngModel"
+                required
+                minlength="4"
+                max-length="128"
+              />
+              <mat-hint *ngIf="password.errors?.required && password.touched">
+                <span translate>Password</span>
+                <span translate> IsRequired</span>
+              </mat-hint>
+              <mat-hint
+                *ngIf="
+                  (password.errors?.minlength || password.errors?.maxlength) &&
+                  password.touched
+                "
+              >
+                <span translate>MinValidPassword</span>
+              </mat-hint>
+            </mat-form-field>
+          </div>
+          <div class="login">
+            <button
+              mat-raised-button
+              color="primary"
+              class="form-field"
+              (click)="loginUser()"
+            >
+              <span translate>Login</span>
+            </button>
+          </div>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
